@@ -90,13 +90,18 @@ git checkout C1;
 ## 8. Reversing Changes in Git
 `git reset $branchReference$`, reverses changes by moving a branch reference backwards in time to an older commit.
 
-For example, `git reset HEAD^` goes one step back, and acts as the last commit was never there before.
+For example, `git reset HEAD^` goes one step back of HEAD, and acts as the last commit was never there before.
 
 
 
 `git revert` TODO
 
-
+You can complete this challenge by using these commands.
+```
+git reset local^
+git checkout pushed
+git revert HEAD
+```
 
 
 
