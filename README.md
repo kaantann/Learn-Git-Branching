@@ -66,5 +66,39 @@ You can complete this challenge by using this command
 `git checkout C4`
 
 
-## 6. Relative Refs
-TO BE CONTINUE
+## 6. Relative Refs #1
+As you experienced in Chapter 5, we use `git checkout` command with a hash value. Normally, hashes are not that simple values. For example, 5th chapter's hashcode was actually `fed2da64c0efc5243660bdd822f82b54e8cbc5d8`, or something like that you will encounter. Relative references comes in handy in such situations. Instead of typing all the hash value, you can simply use `fed2` in order to indicate the hashcode. Also do not forget, you can still use branch names. 
+
+Now, there is a special character denoted as `^` named "caret operator". This operator provides you to make operations about one parent above of the current selected node. For example, if you type `git checkout main^`, you will checkout the first parent of main and HEAD will point that node. In that way, you do not work with hashcodes. That's great. Also, you can do operations with HEAD reference. In other words, you can travel backwards with `HEAD^`.
+
+You can complete this challenge by using these commands.
+```
+git checkout bugFix^
+```
+
+## 7. Relative Refs #2
+In chapter 6, Caret operator (^) was introduced.Actually, almost nothing is different in Tilde operator(~). This time, we can specify the number of how many times we want to go upwards. For example, instead of using 4 Caret operator, we can simply use "~4".
+
+
+You can complete this challenge by using these commands.
+```
+git branch -f main C6;
+git branch -f bugFix C0;
+git checkout C1;
+```
+
+## 8. Reversing Changes in Git
+`git reset $branchReference$`, reverses changes by moving a branch reference backwards in time to an older commit.
+
+For example, `git reset HEAD^` goes one step back, and acts as the last commit was never there before.
+
+
+
+`git revert` TODO
+
+
+
+
+
+
+
