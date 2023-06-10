@@ -92,9 +92,7 @@ git checkout C1;
 
 For example, `git reset HEAD^` goes one step back of HEAD, and acts as the last commit was never there before.
 
-
-
-`git revert` TODO
+`git revert` , however, makes a new commit without applying last committed changes. In this way, your track could seem clearer.
 
 You can complete this challenge by using these commands.
 ```
@@ -103,7 +101,15 @@ git checkout pushed
 git revert HEAD
 ```
 
+## 9. Moving Around Work
+`git cherry-pick $commit1$ $commit2$ ...`, simply copies these commits and pastes below your current location (which is HEAD). Use the hashcode of commits as parameters.
 
+You can complete this challenge by using these commands.
+```
+git cherry-pick C3 C4 C7
+```
+
+## 10. Interactive Rebase Intro
 
 
 
