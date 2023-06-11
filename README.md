@@ -110,6 +110,11 @@ git cherry-pick C3 C4 C7
 ```
 
 ## 10. Interactive Rebase Intro
+TODO explanation
 
+```
+git rebase -i HEAD^^^^
+```
 
+## 11. Locally stacked commits
 
