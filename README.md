@@ -110,8 +110,9 @@ git cherry-pick C3 C4 C7
 ```
 
 ## 10. Interactive Rebase Intro
-TODO explanation
+`git rebase -i $location$` , we have already learnt rebase command. The difference here is the `-i` flag. This flag allows us to select and order which commits should be rebased.
 
+You can complete this challenge by using these commands.
 ```
 git rebase -i HEAD^^^^
 ```
