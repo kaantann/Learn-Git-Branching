@@ -117,5 +117,14 @@ You can complete this challenge by using these commands.
 git rebase -i HEAD^^^^
 ```
 
-## 11. Locally stacked commits
+## 11. Locally Stacked Commits
+To be honest, I did not know what to write here. I just looked the goal section and applied what is needed :D
+
+You can complete this challenge by using these commands.
+```
+git checkout main
+git cherry-pick C4
+```
+
+## 12. Juggling Commits
 
