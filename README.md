@@ -240,5 +240,137 @@ git pull;
 
 ### 5. Faking Teamwork
 
-TO BE CONTINUED
+This is a very good example of how to use git in real life. Developers of this website have 'created' to simulate remote branch changes by using `git fakeTeamwork` command. What it does is simply commiting changes to the remote branch, so that we can merge that changes in our local main branch. In real life, it is used as `git pull origin main`, but last 2 parameter is omitted here.
 
+You can complete this challenge by using these commands.
+```
+git clone;
+git fakeTeamwork 2;
+git commit;
+git pull;
+```
+
+### 6. Git Pushin'
+Reverse of pulling, pushing. Same rules applies here but this time, the source is local branch and the target is remote branch.
+
+You can complete this challenge by using these commands.
+```
+git commit;
+git commit;
+git push;
+```
+
+### 7. Diverged History
+
+Just use `git pull --rebase`. This command takes changes from remote repository and rebasing it with your changes to push your work to remote repo. It is easy. Personally I won't use fetching-rebasing, it is unnecessary work. However, you may merge the commits instead of rebasing, then you should use `git pull`. Use your tools based on your intention. 
+
+You can complete this challenge by using these commands.
+```
+git clone;
+git fakeTeamwork 1;
+git commit;
+git pull --rebase;
+git push;
+```
+
+### 8. Locked Main
+A lot of times, you are not allowed to push your changes to the main branch of remote repository. In this case, you should create a new branch and push it that branch.
+
+You can complete this challenge by using these commands.
+```
+git checkout -b feature;
+git push origin feature;
+git checkout main;
+git reset HEAD^;
+git checkout feature;
+```
+
+### 9. Push Main
+There is a challange for us 😁. See my solution down below. They say it can be done in 6 commands, but who cares really.
+
+You can complete this challenge by using these commands.
+```
+git fetch origin main;
+git rebase o/main side1;
+git rebase side1 side2;
+git rebase side3 side2;
+git checkout main;
+git rebase side3 main;
+git rebase side3 o/main;
+git push origin main;
+```
+
+
+### 10. Merging With Remotes
+
+You can complete this challenge by using these commands.
+```
+git checkout main;
+git pull origin main;
+git merge side1;
+git merge side2;
+git merge side3;
+git push origin main;
+```
+
+### 11. Remote Tracking
+
+You can complete this challenge by using these commands.
+```
+git checkout -b side o/main;
+git commit;
+git pull --rebase;
+git push;
+```
+
+### 12. Push Arguments
+
+You can complete this challenge by using these commands.
+```
+git push origin main;
+git push origin foo;
+```
+
+### 13. Push Arguments Extended
+
+In this level I cheated, sorry :D But it was kind of hard for me 
+
+You can complete this challenge by using these commands.
+```
+git push origin main^:foo;
+git push origin foo:main;
+```
+
+## 14. Fetch Arguments
+
+You can complete this challenge by using these commands.
+```
+git fetch origin main^:foo;
+git fetch origin foo:main;
+git checkout foo;
+git merge main;
+```
+
+### 15. Source of Nothing
+
+Weird git action, but oK.
+
+You can complete this challenge by using these commands.
+```
+git push origin :foo;
+git fetch origin :bar;
+```
+
+### 16. Pull Arguments
+
+`git pull origin $source$:$destination$`, fetches from remote branch (source), creates a new branch if $destination$ branch does not exist, and merges with checkouted branch. Very simple and effective.
+
+You can complete this challenge by using these commands.
+```
+git pull origin bar:foo
+git pull origin main:side;
+```
+
+
+# There it is. Congratz.
+![congratz](https://github.com/kaantann/Learn-Git-Branching/assets/78250792/58be8a5a-8103-4152-83d6-d3aab935387b)
